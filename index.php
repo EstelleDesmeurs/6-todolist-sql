@@ -1,5 +1,7 @@
 <?php 
 require 'form.php';
+require 'db.php';
+
 ?>
 
 <html>
@@ -32,9 +34,9 @@ require 'form.php';
 			<section class="archives">
 				<h2>Done</h2>
 
-				<?php
+				<!--<?php
 				displayDone();
-				?>
+				?>-->
 
 			</section>
 			</div>
