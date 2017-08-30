@@ -1,5 +1,8 @@
 <?php
 
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
 try
 {
 	$bdd = new PDO('mysql:host=localhost;dbname=todolist;charset=utf8', 'root', '12root++');
@@ -22,15 +25,25 @@ function validate($y) {
     return $y;
 }
 
-$content = sanitize($_POST['content']);	
-//print_r($content);
 
-function todo {
-		
-		$req = $bdd->prepare(('INSERT INTO id, todo FROM todos) VALUES (?, false)');
-		$req = execute->(array($content));
+//$content = sanitize($_POST['content']); 
+$todos = array(
+    "todo" => "eeeee",
+    "done" => false);
+print_r($todos);
+
+// if (isset($content)) {
+    function todo () {
+
+    //     $req = $bdd->prepare('INSERT INTO todos(todo, done) VALUES(:todo, :done)');
+    //     $req->execute(array(
+    //     'todo' => $content,
+    //     'done' => false
+    //     ));
+    // }
+//}        
+    $req = $bdd->prepare('INSERT INTO todos(ID, todo, done) VALUES("", "aller à la commune", false)');
+    $req->execute(array($todos));
+    $req->closeCursor();
 }
-
 ?>
-
-

@@ -1,7 +1,6 @@
 <?php 
 require 'form.php';
 require 'db.php';
-
 ?>
 
 <html>
@@ -25,7 +24,7 @@ require 'db.php';
 				<h2>To Do</h2>
 
 				<?php
-				toDo();
+				todo();
 				?>
 
 			<input type="submit" id="done" name="done" value="Edit"/>
